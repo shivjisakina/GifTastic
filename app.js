@@ -14,7 +14,7 @@ var buttons = ["Greys Anatomy", "Friends", "How I Met Your Mother", "The Middle"
 // Function to get the gifs according to the button
 function getshows() {
 
-    var tvshow = $(this).attr("data-tvshow");
+    var tvshow = $(this).attr("data-show");
     console.log(tvshow);
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         tvshow + "&api_key=dc6zaTOxFJmzC&limit=10";
@@ -54,5 +54,30 @@ function getshows() {
 getshows();
 
 // Function to turn user input into buttons
+
+function renderButtons() {
+    $(".getbuttons").empty();
+    for (var i = 0; i < buttons.length; i++) {
+        var a = $("<button>");
+        a.addClass("buttons");
+        a.attr("data-buttons", buttons[i]);
+        a.text(buttons[i]);
+        $(".getbuttons").append(a);
+    }
+}
+
+$("#addusershow").on("click", function(event) {
+    event.preventDefault();
+    var show = $("#user-input").val().trim();
+    buttons.push(show);
+    renderButtons();
+});
+
+renderButtons();
+
+$(document).on("click", ".buttons", getshows);
+renderButtons();
+
+
 
 
