@@ -26,10 +26,11 @@ $(document).ready (function() {
     htmlbtn();
 
     // Turning them into on click functions
-
-    $(document).on("click", ".getbuttons", function () {
+    $(document).on("click", ".getbuttons", function (userbuttons) {
 
         $("#gifsareas").empty();
+
+        //var tvshows = $(event.target).val().trim();
 
         var tvshows = $(event.target).text().trim();
 
@@ -74,14 +75,44 @@ $(document).ready (function() {
                 // Appending the paragraph tag to the showDiv
                 showDiv.append(p);
 
-                // Prepending showDiv to HTML
-                $("#gifsarea").prepend(showDiv)
+                // Prepending showDiv
+                $("#gifsarea").prepend(showDiv);
+                $("#gifsarea").prepend(showImg)
+
 
 
             }
 
 
         });
+
+        /*// Create buttons based on user input
+        function renderButtons() {
+            $(".userbtn").empty();
+            for (var i = 0; i < buttons.length; i++) {
+                var a = $("<button>");
+                a.addClass("tvshow");
+                a.attr("data-tvshow", buttons[i]);
+                a.text(buttons[i]);
+                $(".userbtns").append(a);
+                return false;
+
+            }
+        }
+
+        $("#addusershow").on("click", function(event) {
+            event.preventDefault();
+            var usershow = $("#user-input").val().trim();
+            buttons.push(usershow);
+            renderButtons();
+        });
+        renderButtons();
+
+        $(document).on("click", ".tvshow", userbuttons);
+        renderButtons();
+        */
+
+
 
     });
 
