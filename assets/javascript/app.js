@@ -66,6 +66,7 @@ function renderButtons() {
     }
 }
 
+// Get gifs on click
 $("#addusershow").on("click", function(event) {
     event.preventDefault();
     var show = $("#user-input").val().trim();
