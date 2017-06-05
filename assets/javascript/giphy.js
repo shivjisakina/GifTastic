@@ -2,6 +2,11 @@
 $(document).ready (function() {
     console.log("ready");
 
+// ---------------------------------------------------------------------------------------------------------------------
+
+    // Animation variable
+    var animate = "0";
+
     // Buttons variable
     var buttons = ["Greys Anatomy", "Friends", "How I Met Your Mother", "The Middle", "The Carrie Diaries", "The Fosters", "Chasing Life", "Two and a Half Men", "Gossip Girl", "The Originals", "2 Broke Girls", "Mike & Molly", "The Big Bang Theory"]
 
@@ -24,6 +29,8 @@ $(document).ready (function() {
 
     // Initialize htmlbtn function
     htmlbtn();
+
+// ---------------------------------------------------------------------------------------------------------------------
 
     // Turning them into on click functions
     $(document).on("click", ".getbuttons", function (userbuttons) {
@@ -85,6 +92,31 @@ $(document).ready (function() {
 
 
         });
+
+        // Trying to set animation to still but it didnt do anything
+
+        // Create on click function on the gifs
+
+        /*$(".showImg").on("click", function(){
+            console.log("image clicked");
+
+            // If else statement to figure out when to stop/start animation
+            if (animate == 0){
+                var imgVal = this.value;
+                console.log(imgVal);
+                $(this).attr("src", results[imgVal].images.fixed_height.url);
+                animate ++
+
+            }else {
+                var imgVal = this.value;
+                $(this).attr("src", results[imageVal].images.fixed_height_still.url);
+                animate --
+            }
+
+        });*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------
 
         /*// Create buttons based on user input
         function renderButtons() {
