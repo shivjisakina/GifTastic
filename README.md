@@ -2,7 +2,7 @@
 
 ## Look up gifs from your favorite TV shows!
 
-####This was a project for week 3 of the UCF Coding Bootcamp.
+This was a project for week 3 of the UCF Coding Bootcamp.
 
 Technologies used:
 * HTML
