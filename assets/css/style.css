@@ -11,3 +11,8 @@ body {
 .addshow {
     font-size: 30px;
 }
+
+.item {
+    float: left;
+    margin-right: 10px;
+}

@@ -58,7 +58,7 @@ $(document).ready (function() {
             for (var i = 0; i < results.length; i++) {
 
                 // Creating a new div tag to store the results
-                var showDiv = $("<div>");
+                var showDiv = $("<div class='item'>");
 
                 // A new paragraph tag to store the gif ratings
                 var p = $("<p>").text("Rating: " + results[i].rating);
@@ -77,7 +77,7 @@ $(document).ready (function() {
 
                 // Prepending showDiv
                 $("#gifsarea").prepend(showDiv);
-                $("#gifsarea").prepend(showImg)
+                //$("#gifsarea").prepend(showImg)
 
 
 
