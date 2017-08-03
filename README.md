@@ -12,10 +12,6 @@ Technologies used:
 * APIs
 * AJAX
 
-![](https://media.giphy.com/media/HzXwlkMSvsxK8/giphy.gif)
-
-(P.S. you can never watch too many TV shows :stuck_out_tongue_closed_eyes:)
-
 ![](https://media.giphy.com/media/Myrl3DnFGuuvS/giphy.gif)
 
 
